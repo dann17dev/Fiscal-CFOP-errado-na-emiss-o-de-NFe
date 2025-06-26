@@ -14,7 +14,7 @@ Criação de uma rotina de validação automática do CFOP no momento da emissã
 
 🧪 Testes realizados
 Tipo Operação	CFOP	Resultado Esperado
-Venda     (V)	1102	❌ Erro: inválido
+Venda     (V)	1102	❌ Erro: inválido\
 Devolução (D)	6102	❌ Erro: inválido
 Venda     (V)	5102	✅ Válido
 Devolução (D)	1411	✅ Válido
