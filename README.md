@@ -14,9 +14,9 @@ Criação de uma rotina de validação automática do CFOP no momento da emissã
 
 🧪 Testes realizados
 Tipo Operação	CFOP	Resultado Esperado
-Venda (V)	1102	❌ Erro: inválido
+Venda     (V)	1102	❌ Erro: inválido
 Devolução (D)	6102	❌ Erro: inválido
-Venda (V)	5102	✅ Válido
+Venda     (V)	5102	✅ Válido
 Devolução (D)	1411	✅ Válido
 
 🎯 Benefícios
@@ -28,11 +28,7 @@ Redução de retrabalho e erros humanos
 
 🏷️ Tags
 #Protheus #Fiscal #CFOP #ADVPL #Automação #NotaFiscal
-```advpl
-    MsgInfo("CFOP válido!")
-    Return .T.
-Return
-```
+
 
 ### 🧾 Código exemplo (ADVPL)
 
@@ -52,5 +48,10 @@ User Function ValidarCFOP()
         MsgStop("CFOP inválido para venda. Utilize CFOPs iniciados por 5, 6 ou 7.")
         Return .F.
     EndIf
+```
+```advpl
+    MsgInfo("CFOP válido!")
+    Return .T.
+Return
 
 
