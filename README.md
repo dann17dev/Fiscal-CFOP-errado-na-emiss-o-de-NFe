@@ -12,6 +12,28 @@ Ao emitir notas fiscais eletrônicas (NFe) no Protheus, operadores selecionam CF
 ### 💡 Solução aplicada
 Criação de uma rotina de validação automática do CFOP no momento da emissão, verificando se o código é compatível com o tipo da operação (Venda ou Devolução). A validação pode ser feita via código ADVPL, exibindo mensagens de erro e impedindo a continuidade até a correção.
 
+🧪 Testes realizados
+Tipo Operação	CFOP	Resultado Esperado
+Venda (V)	1102	❌ Erro: inválido
+Devolução (D)	6102	❌ Erro: inválido
+Venda (V)	5102	✅ Válido
+Devolução (D)	1411	✅ Válido
+
+🎯 Benefícios
+Minimização de rejeições fiscais
+
+Processos mais ágeis e confiáveis
+
+Redução de retrabalho e erros humanos
+
+🏷️ Tags
+#Protheus #Fiscal #CFOP #ADVPL #Automação #NotaFiscal
+```advpl
+    MsgInfo("CFOP válido!")
+    Return .T.
+Return
+```
+
 ### 🧾 Código exemplo (ADVPL)
 
 ```advpl
@@ -31,23 +53,4 @@ User Function ValidarCFOP()
         Return .F.
     EndIf
 
-🧪 Testes realizados
-Tipo Operação	CFOP	Resultado Esperado
-Venda (V)	1102	❌ Erro: inválido
-Devolução (D)	6102	❌ Erro: inválido
-Venda (V)	5102	✅ Válido
-Devolução (D)	1411	✅ Válido
 
-🎯 Benefícios
-Minimização de rejeições fiscais
-
-Processos mais ágeis e confiáveis
-
-Redução de retrabalho e erros humanos
-
-🏷️ Tags
-#Protheus #Fiscal #CFOP #ADVPL #Automação #NotaFiscal
-
-    MsgInfo("CFOP válido!")
-    Return .T.
-Return
