@@ -31,6 +31,23 @@ User Function ValidarCFOP()
         Return .F.
     EndIf
 
+🧪 Testes realizados
+Tipo Operação	CFOP	Resultado Esperado
+Venda (V)	1102	❌ Erro: inválido
+Devolução (D)	6102	❌ Erro: inválido
+Venda (V)	5102	✅ Válido
+Devolução (D)	1411	✅ Válido
+
+🎯 Benefícios
+Minimização de rejeições fiscais
+
+Processos mais ágeis e confiáveis
+
+Redução de retrabalho e erros humanos
+
+🏷️ Tags
+#Protheus #Fiscal #CFOP #ADVPL #Automação #NotaFiscal
+
     MsgInfo("CFOP válido!")
     Return .T.
 Return
